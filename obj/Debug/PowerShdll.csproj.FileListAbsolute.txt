@@ -1,6 +1,0 @@
-C:\Users\Louis\Documents\Visual Studio 2015\Projects\PowerShdll\bin\Debug\PowerShdll.dll.config
-C:\Users\Louis\Documents\Visual Studio 2015\Projects\PowerShdll\bin\Debug\PowerShdll.dll
-C:\Users\Louis\Documents\Visual Studio 2015\Projects\PowerShdll\bin\Debug\PowerShdll.pdb
-C:\Users\Louis\Documents\Visual Studio 2015\Projects\PowerShdll\obj\Debug\PowerShdll.csprojResolveAssemblyReference.cache
-C:\Users\Louis\Documents\Visual Studio 2015\Projects\PowerShdll\obj\Debug\PowerShdll.dll
-C:\Users\Louis\Documents\Visual Studio 2015\Projects\PowerShdll\obj\Debug\PowerShdll.pdb
