@@ -1,0 +1,5 @@
+C:\Users\Louis\Documents\Visual Studio 2015\Projects\PSUnlockDll\bin\x86\Debug\PSUnlock.dll.config
+C:\Users\Louis\Documents\Visual Studio 2015\Projects\PSUnlockDll\bin\x86\Debug\PSUnlock.dll
+C:\Users\Louis\Documents\Visual Studio 2015\Projects\PSUnlockDll\bin\x86\Debug\PSUnlock.pdb
+C:\Users\Louis\Documents\Visual Studio 2015\Projects\PSUnlockDll\obj\x86\Debug\PSUnlock.dll
+C:\Users\Louis\Documents\Visual Studio 2015\Projects\PSUnlockDll\obj\x86\Debug\PSUnlock.pdb

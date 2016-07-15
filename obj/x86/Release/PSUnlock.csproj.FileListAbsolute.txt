@@ -1,0 +1,6 @@
+C:\Users\Louis\Documents\Visual Studio 2015\Projects\PSUnlockDll\bin\x86\Release\PSUnlock.dll.config
+C:\Users\Louis\Documents\Visual Studio 2015\Projects\PSUnlockDll\bin\x86\Release\PSUnlock.dll
+C:\Users\Louis\Documents\Visual Studio 2015\Projects\PSUnlockDll\bin\x86\Release\PSUnlock.pdb
+C:\Users\Louis\Documents\Visual Studio 2015\Projects\PSUnlockDll\obj\x86\Release\PSUnlock.csprojResolveAssemblyReference.cache
+C:\Users\Louis\Documents\Visual Studio 2015\Projects\PSUnlockDll\obj\x86\Release\PSUnlock.dll
+C:\Users\Louis\Documents\Visual Studio 2015\Projects\PSUnlockDll\obj\x86\Release\PSUnlock.pdb

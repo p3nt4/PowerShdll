@@ -1,0 +1,3 @@
+C:\Users\Louis\Documents\Visual Studio 2015\Projects\PSUnlock\PSUnlock\light\obj\Release\PSUnlock.csprojResolveAssemblyReference.cache
+C:\Users\Louis\Documents\Visual Studio 2015\Projects\PSUnlock\PSUnlock\light\obj\Release\PSUnlock.exe
+C:\Users\Louis\Documents\Visual Studio 2015\Projects\PSUnlock\PSUnlock\light\PSUnlock.exe
