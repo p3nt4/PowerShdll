@@ -1,0 +1,5 @@
+C:\Users\Louis\Documents\Projects\Powershdll\dll\bin\x64\Release\PowerShdll.dll.config
+C:\Users\Louis\Documents\Projects\Powershdll\dll\bin\x64\Release\PowerShdll.dll
+C:\Users\Louis\Documents\Projects\Powershdll\dll\bin\x64\Release\PowerShdll.pdb
+C:\Users\Louis\Documents\Projects\Powershdll\dll\obj\x64\Release\PowerShdll.dll
+C:\Users\Louis\Documents\Projects\Powershdll\dll\obj\x64\Release\PowerShdll.pdb
