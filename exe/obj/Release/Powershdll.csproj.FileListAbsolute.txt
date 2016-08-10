@@ -1,0 +1,6 @@
+C:\Users\Louis\Documents\Projects\Powershdll\exe\bin\Release\Powershdll.exe.config
+C:\Users\Louis\Documents\Projects\Powershdll\exe\bin\Release\Powershdll.exe
+C:\Users\Louis\Documents\Projects\Powershdll\exe\bin\Release\Powershdll.pdb
+C:\Users\Louis\Documents\Projects\Powershdll\exe\obj\Release\Powershdll.csprojResolveAssemblyReference.cache
+C:\Users\Louis\Documents\Projects\Powershdll\exe\obj\Release\Powershdll.exe
+C:\Users\Louis\Documents\Projects\Powershdll\exe\obj\Release\Powershdll.pdb
