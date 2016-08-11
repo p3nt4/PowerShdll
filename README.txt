@@ -4,7 +4,7 @@ Does not require access to powershell.exe as it uses powershell automation dlls.
 
 #dll mode:
 
-rundll32 PowerShdll,main
+rundll32 PowerShdll.dll,main
 
 #exe mode
 
