@@ -197,7 +197,7 @@ namespace Powershdll
                         this.cleanup();
                     };
                     Console.SetCursorPosition(0, Console.CursorTop + 1);
-                    string script = string.Join("", args);
+                    string script = string.Join(" ", args);
                     Console.Write(ps.exe(script));
                     ps.close();
             }

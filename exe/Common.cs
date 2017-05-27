@@ -89,7 +89,7 @@ namespace Powershdll
             }
             else
             {
-                string script = string.Join("", args);
+                string script = string.Join(" ", args);
                 Console.Write(ps.exe(script));
                 ps.close();
             }
