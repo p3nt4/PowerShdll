@@ -20,8 +20,14 @@ PowerShdll.exe <script>
 PowerShdll.exe -f <path>       Run the script passed as argument
 PowerShdll.exe -i      Start an interactive console in this console
 ```
+## Examples
+### Run base64 encoded script
+```
+rundll32 Powershdll.dll,main $a = [System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String("BASE64")); Invoke-Expression $a
+```
 
 ## Known Issues
 
 Some errors do not seem to show in the output. May be confusing as commands such as Import-Module do not output an error on failure.
 Make sure you have typed your commands correctly!
+
