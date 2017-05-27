@@ -1,6 +1,0 @@
-C:\Users\Louis\Documents\Visual Studio 2015\Projects\PSUnlock\PSUnlock\bin\Debug\PSUnlock.exe.config
-C:\Users\Louis\Documents\Visual Studio 2015\Projects\PSUnlock\PSUnlock\bin\Debug\PSUnlock.exe
-C:\Users\Louis\Documents\Visual Studio 2015\Projects\PSUnlock\PSUnlock\bin\Debug\PSUnlock.pdb
-C:\Users\Louis\Documents\Visual Studio 2015\Projects\PSUnlock\PSUnlock\obj\Debug\PSUnlock.csprojResolveAssemblyReference.cache
-C:\Users\Louis\Documents\Visual Studio 2015\Projects\PSUnlock\PSUnlock\obj\Debug\PSUnlock.exe
-C:\Users\Louis\Documents\Visual Studio 2015\Projects\PSUnlock\PSUnlock\obj\Debug\PSUnlock.pdb
