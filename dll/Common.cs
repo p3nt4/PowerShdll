@@ -152,7 +152,7 @@ namespace Powershdll
             Console.WriteLine("rundll32 PowerShdll,main -f <path>\t Run the script passed as argument");
             Console.WriteLine("rundll32 PowerShdll,main -w\t Start an interactive console in a new window");
             Console.WriteLine("rundll32 PowerShdll,main -i\t Start an interactive console in this console");
-            Console.WriteLine("\nIf you do not have an interractive console, use -n to avoid crashes on ouput");
+            Console.WriteLine("\nIf you do not have an interractive console, use -n to avoid crashes on output");
 
         }
         public void start(string[] args) {
