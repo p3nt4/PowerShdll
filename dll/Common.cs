@@ -111,7 +111,7 @@ namespace Powershdll
                 Console.WriteLine(ps.exe(cmd));
             }
         }
-        public static string LoadScript(string filename)
+        public string LoadScript(string filename)
         {
             try
             {
@@ -129,6 +129,12 @@ namespace Powershdll
             catch (Exception e)
             {
                 string errorText = e.Message + "\n";
+                pp = Process.GetCurrentProcess().Parent();
+                PSConsole.stealConsole(pp);
+                Console.CancelKeyPress += delegate {
+                    this.cleanup();
+                };
+                Console.SetCursorPosition(0, Console.CursorTop + 2);
                 Console.WriteLine(errorText);
                 return ("error");
             }
@@ -146,19 +152,29 @@ namespace Powershdll
             Console.WriteLine("rundll32 PowerShdll,main -f <path>\t Run the script passed as argument");
             Console.WriteLine("rundll32 PowerShdll,main -w\t Start an interactive console in a new window");
             Console.WriteLine("rundll32 PowerShdll,main -i\t Start an interactive console in this console");
+            Console.WriteLine("\nIf you do not have an interractive console, use -n to avoid crashes on ouput");
+
         }
         public void start(string[] args) {
-            if (args[0]=="") { usage(); return; }
-            else if (args[0] == "-h")
+            int i=0;
+            bool useConsole = true;
+            string ret;
+            if (args[i]=="") { usage(); return; }
+            if (args[i] == "-n")
+            {
+                i++;
+                useConsole = false;
+            }
+            if (args[i] == "-h")
             {
                 usage();
             }
-            else if (args[0] == "-w")
+            else if (args[i] == "-w")
             {
                 PSConsole.getNewConsole();
                 this.interact();
             }
-            else if (args[0] == "-i")
+            else if (args[i] == "-i")
             {
                 pp = Process.GetCurrentProcess().Parent();
                 pp.Suspend();
@@ -174,22 +190,39 @@ namespace Powershdll
                 ps.close();
                 pp.Resume();
             }
-            else if (args[0] == "-f")
+            else if (args[i] == "-f")
             {
-                if (args.Length < 2) {usage(); return; }
-                pp = Process.GetCurrentProcess().Parent();
-                PSConsole.stealConsole(pp);
-                Console.CancelKeyPress += delegate {
-                    this.cleanup();
-                };
-                Console.SetCursorPosition(0, Console.CursorTop + 1);
-                string script = PowerShdll.LoadScript(args[1]);
+                i++;
+                if (args.Length < 2) { usage(); return; }
+                if (args[i] == "-n")
+                {
+                    if (args.Length < 3) { usage(); return; }
+                    i++;
+                    useConsole = false;
+                }
+                string script = LoadScript(args[i]);
                 if (script != "error")
                 {
-                    Console.Write(ps.exe(script));
-                }
+                    ret = ps.exe(script);
+                    if (useConsole) {
+                        pp = Process.GetCurrentProcess().Parent();
+                        PSConsole.stealConsole(pp);
+                        Console.CancelKeyPress += delegate {
+                            this.cleanup();
+                        };
+                        Console.SetCursorPosition(0, Console.CursorTop + 1);
+                        Console.WriteLine(ret);
+                    }
+            }
             }
             else
+           {
+                string script = string.Join(" ",args, i, args.Length-i);
+                if (script[0] == '"' && script[script.Length - 1] == '"') {
+                    script = script.Substring(1, script.Length - 2);
+                }
+                ret = ps.exe(script);
+                if (useConsole)
                 {
                     pp = Process.GetCurrentProcess().Parent();
                     PSConsole.stealConsole(pp);
@@ -197,9 +230,9 @@ namespace Powershdll
                         this.cleanup();
                     };
                     Console.SetCursorPosition(0, Console.CursorTop + 1);
-                    string script = string.Join(" ", args);
-                    Console.Write(ps.exe(script));
-                    ps.close();
+                    Console.WriteLine(ret);
+                }
+                ps.close();
             }
             return;
     }
