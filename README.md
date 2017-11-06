@@ -24,7 +24,7 @@ PowerShdll.exe -i      Start an interactive console in this console
 ## Examples
 ### Run base64 encoded script
 ```
-rundll32 Powershdll.dll,main $a = [System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String("BASE64")); Invoke-Expression $a
+rundll32 Powershdll.dll,main [System.Text.Encoding]::Default.GetString([System.Convert]::FromBase64String("BASE64")) ^| iex
 ```
 ### Download and run script
 ```
