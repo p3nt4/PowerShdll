@@ -4,9 +4,6 @@ using System.Collections.ObjectModel;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 using System.IO;
-using System.Runtime.InteropServices;
-using Microsoft.Win32.SafeHandles;
-using System.Diagnostics;
 
 //https://blogs.msdn.microsoft.com/kebab/2014/04/28/executing-powershell-scripts-from-c/
 

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerShdll", "dll\PowerShdll.csproj", "{36EBF9AA-2F37-4F1D-A2F1-F2A45DEEAF21}"
 EndProject
@@ -26,8 +26,8 @@ Global
 		{36EBF9AA-2F37-4F1D-A2F1-F2A45DEEAF21}.Release|Any CPU.Build.0 = Release|Any CPU
 		{36EBF9AA-2F37-4F1D-A2F1-F2A45DEEAF21}.Release|x64.ActiveCfg = Release|x64
 		{36EBF9AA-2F37-4F1D-A2F1-F2A45DEEAF21}.Release|x64.Build.0 = Release|x64
-		{36EBF9AA-2F37-4F1D-A2F1-F2A45DEEAF21}.Release|x86.ActiveCfg = Release|x64
-		{36EBF9AA-2F37-4F1D-A2F1-F2A45DEEAF21}.Release|x86.Build.0 = Release|x64
+		{36EBF9AA-2F37-4F1D-A2F1-F2A45DEEAF21}.Release|x86.ActiveCfg = Release|x86
+		{36EBF9AA-2F37-4F1D-A2F1-F2A45DEEAF21}.Release|x86.Build.0 = Release|x86
 		{5067F916-9971-47D6-BBCB-85FB3982584F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5067F916-9971-47D6-BBCB-85FB3982584F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5067F916-9971-47D6-BBCB-85FB3982584F}.Debug|x64.ActiveCfg = Debug|Any CPU
