@@ -19,7 +19,7 @@ namespace Powershdll
         }
         public void interact()
         {
-            Console.WriteLine("PowerShdll.dll v0.1");
+            Console.WriteLine("PowerShdll.dll");
             string cmd = "";
             while (cmd.ToLower() != "exit")
             {
@@ -55,12 +55,13 @@ namespace Powershdll
         {
             Console.WriteLine("Usage:");
             Console.WriteLine("PowerShdll.exe <script>");
+            Console.WriteLine("PowerShdll.exe -h\t Display this messages");
             Console.WriteLine("PowerShdll.exe -f <path>\t Run the script passed as argument");
-            Console.WriteLine("PowerShdll.exe -i\t Start an interactive console");
+            Console.WriteLine("PowerShdll.exe -i\t Start an interactive console (Default)");
         }
         public void start(string[] args)
         {
-            if (args.Length==0) { usage(); return; }
+            if (args.Length==0) { this.interact(); return; }
             else if (args[0] == "-h")
             {
                 usage();

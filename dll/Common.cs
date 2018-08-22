@@ -91,6 +91,9 @@ namespace Powershdll
     }
 
      class PowerShdll{
+        [DllImport("kernel32.dll")]
+        static extern IntPtr GetConsoleWindow();
+
         Process pp;
         PS ps;
         public PowerShdll() {
@@ -102,7 +105,7 @@ namespace Powershdll
         }
         public void interact()
         {
-            Console.WriteLine("PowerShdll.dll v0.1");
+            Console.WriteLine("PowerShdll.dll");
             string cmd = "";
             while (cmd.ToLower() != "exit")
             {
@@ -149,8 +152,9 @@ namespace Powershdll
             Console.SetCursorPosition(0, Console.CursorTop + 2);
             Console.WriteLine("Usage:");
             Console.WriteLine("rundll32 PowerShdll,main <script>");
+            Console.WriteLine("rundll32 PowerShdll,main -h\t Display this message");
             Console.WriteLine("rundll32 PowerShdll,main -f <path>\t Run the script passed as argument");
-            Console.WriteLine("rundll32 PowerShdll,main -w\t Start an interactive console in a new window");
+            Console.WriteLine("rundll32 PowerShdll,main -w\t Start an interactive console in a new window (Default)");
             Console.WriteLine("rundll32 PowerShdll,main -i\t Start an interactive console in this console");
             Console.WriteLine("\nIf you do not have an interractive console, use -n to avoid crashes on output");
 
@@ -159,7 +163,11 @@ namespace Powershdll
             int i=0;
             bool useConsole = true;
             string ret;
-            if (args[i]=="") { usage(); return; }
+            if (args.Length == 0)
+            {
+                PSConsole.getNewConsole();
+                this.interact();
+            }
             if (args[i] == "-n")
             {
                 i++;
@@ -167,9 +175,9 @@ namespace Powershdll
             }
             if (args[i] == "-h")
             {
-                usage();
+                usage();return;
             }
-            else if (args[i] == "-w")
+            else if (args[i] == "-w" || args[i]=="")
             {
                 PSConsole.getNewConsole();
                 this.interact();
@@ -180,7 +188,8 @@ namespace Powershdll
                 pp.Suspend();
                 PSConsole.stealConsole(pp);
                 Console.Title = "PowerShdll";
-                Console.CancelKeyPress += delegate {
+                Console.CancelKeyPress += delegate
+                {
                     this.cleanup();
                 };
                 Console.SetCursorPosition(0, Console.CursorTop + 1);
@@ -204,21 +213,24 @@ namespace Powershdll
                 if (script != "error")
                 {
                     ret = ps.exe(script);
-                    if (useConsole) {
+                    if (useConsole)
+                    {
                         pp = Process.GetCurrentProcess().Parent();
                         PSConsole.stealConsole(pp);
-                        Console.CancelKeyPress += delegate {
+                        Console.CancelKeyPress += delegate
+                        {
                             this.cleanup();
                         };
                         Console.SetCursorPosition(0, Console.CursorTop + 1);
                         Console.WriteLine(ret);
                     }
-            }
+                }
             }
             else
-           {
-                string script = string.Join(" ",args, i, args.Length-i);
-                if (script[0] == '"' && script[script.Length - 1] == '"') {
+            {
+                string script = string.Join(" ", args, i, args.Length - i);
+                if (script[0] == '"' && script[script.Length - 1] == '"')
+                {
                     script = script.Substring(1, script.Length - 2);
                 }
                 ret = ps.exe(script);
@@ -226,7 +238,8 @@ namespace Powershdll
                 {
                     pp = Process.GetCurrentProcess().Parent();
                     PSConsole.stealConsole(pp);
-                    Console.CancelKeyPress += delegate {
+                    Console.CancelKeyPress += delegate
+                    {
                         this.cleanup();
                     };
                     Console.SetCursorPosition(0, Console.CursorTop + 1);
