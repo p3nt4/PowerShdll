@@ -3,7 +3,7 @@ Run PowerShell with dlls only.
 
 Does not require access to powershell.exe as it uses powershell automation dlls.
 
-PowerShdll can be run with: rundll32.exe, installutil.exe, regsvcs.exe, regasm.exe, regasm.exe.
+PowerShdll can be run with: rundll32.exe, installutil.exe, regsvcs.exe, regasm.exe and regsvr32.exe.
 
 ## dll mode:
 
