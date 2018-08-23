@@ -91,9 +91,6 @@ namespace Powershdll
     }
 
      class PowerShdll{
-        [DllImport("kernel32.dll")]
-        static extern IntPtr GetConsoleWindow();
-
         Process pp;
         PS ps;
         public PowerShdll() {
