@@ -19,7 +19,7 @@ namespace Powershdll
         }
         public void interact()
         {
-            Console.WriteLine("PowerShdll.dll");
+            Console.WriteLine("PowerShdll.exe");
             string cmd = "";
             while (cmd.ToLower() != "exit")
             {
