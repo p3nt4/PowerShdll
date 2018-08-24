@@ -39,7 +39,7 @@ If you do not have an interractive console, use -n to avoid crashes on output
 ```
 Usage:
 PowerShdll.exe <script>
-PowerShdll.exe -h      Display this message.
+PowerShdll.exe -h      Display this message
 PowerShdll.exe -f <path>       Run the script passed as argument
 PowerShdll.exe -i      Start an interactive console in this console (Default)
 ```
