@@ -118,7 +118,10 @@ namespace Powershdll
                 StringBuilder stringBuilder = new StringBuilder();
                 foreach (PSObject obj in results)
                 {
-                    stringBuilder.AppendLine(obj.ToString());
+                    foreach (string line in obj.ToString().Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None))
+                    {
+                        stringBuilder.AppendLine(line.TrimEnd());
+                    }
                 }
                 return stringBuilder.ToString();
             }

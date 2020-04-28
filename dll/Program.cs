@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using RGiesecke.DllExport;
-using System.Configuration.Install;
-using System.Diagnostics;
-using System.Reflection;
 using System.EnterpriseServices;
 
 //https://blogs.msdn.microsoft.com/kebab/2014/04/28/executing-powershell-scripts-from-c/
@@ -17,8 +14,7 @@ namespace Powershdll
     {
         public static void Main()
         {
-            Console.WriteLine("Hello From Main...I Don't Do Anything");
-            //Add any behaviour here to throw off sandbox execution/analysts :)
+            Console.WriteLine("");
         }
 
     }

@@ -337,14 +337,25 @@ namespace Powershdll
                 StringBuilder stringBuilder = new StringBuilder();
                 foreach (PSObject obj in results)
                 {
-                    stringBuilder.AppendLine(obj.ToString());
+                    foreach (string line in obj.ToString().Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None))
+                    {
+                        stringBuilder.AppendLine(line.TrimEnd());
+                    }
+                }
+                string cleanOutput = "";
+                using (StringReader reader = new StringReader(stringBuilder.ToString()))
+                {
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        cleanOutput = line.Trim() + "\n";
+                    }
                 }
                 return stringBuilder.ToString();
             }
             catch (Exception e)
             {
                 // Let the user know what went wrong.
-
                 string errorText = e.Message + "\n";
                 return (errorText);
             }
