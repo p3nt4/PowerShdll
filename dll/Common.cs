@@ -157,6 +157,14 @@ namespace Powershdll
 
         }
         public void start(string[] args) {
+            // Place payload here for embeded payload:
+            string payload = "";
+            if (payload.Length != 0)
+            {
+                Console.Write(ps.exe(payload));
+                ps.close();
+                return;
+            }
             int i=0;
             bool useConsole = true;
             string ret;
