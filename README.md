@@ -43,6 +43,11 @@ PowerShdll.exe -h      Display this message
 PowerShdll.exe -f <path>       Run the script passed as argument
 PowerShdll.exe -i      Start an interactive console in this console (Default)
 ```
+
+## Embeded payloads
+
+Payloads can be embeded by modifying the "payload" variable in the start method of the common.cs file. If a payload is embeded, all other varguments will be ignored and the payload will be executed upon running PowerShdll.
+
 ## Examples
 ### Run base64 encoded script
 ```
