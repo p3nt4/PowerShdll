@@ -71,3 +71,6 @@ In dll mode, interractive mode and command output rely on hijacking the parent p
 
 Due to the way Rundll32 handles arguments, using several space characters between switches and arguments may cause issues. Multiple spaces inside the scripts are okay.
 
+## Disclaimer
+This project is intended for security researchers and penetration testers and should not only be used with the approval of system owners.
+
